@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: raleway;
+    font-family: Raleway;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +18,10 @@ h3{
 .container{
     margin: 0 auto;
     max-width: 1400px;
+    /* padding: 10px; */
 }
+
+/* spécificité => priorité de la class par rapport à une autre */
 
 .bold{
     font-weight: bold;
@@ -28,7 +31,7 @@ h3{
 .booki{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
 }
 
 #bookiLogo{
@@ -46,7 +49,7 @@ h3{
 }
 
 .navbarLiens{
-    padding: 40px 20px 0 20px;
+    padding: 40px 20px 10px 20px;
     margin-right: 20px;
     border-top: 3px solid transparent;
 }
@@ -74,12 +77,18 @@ h3{
 
 #iconeLocation{
     background: #f2f2f2;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 15px 0 0 15px;
+    height: 41px;
+    width: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #rechercheInput input{
-    height: 35px;
+    height: 41px;
+    border: #f2f2f2;
 }
 
 #buttonRechercher, #buttonLoupe{
@@ -89,6 +98,7 @@ h3{
     padding: 10px;
     font-weight: bold;
     border: 0;
+    height: 41px;
 }
 
 #buttonLoupe{
@@ -100,7 +110,7 @@ h3{
 /* Header - Ligne 4 */
 .filtresContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     flex-wrap: wrap;
     align-items: center;
     margin: 20px 0 20px 0;
@@ -113,6 +123,17 @@ h3{
 
 .filtresBar:hover{
     background: #DEEBFF;
+}
+
+/* LIGNE 5 */
+#iconeInfo i{
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    text-align: center;
+    padding: 3px;
 }
 
 /* HEBERGEMENT A MARSEILLE */
@@ -163,16 +184,22 @@ h3{
 /* 2 - POPULAIRE */
 #populaireContainer{
     background-color: #f2f2f2;
-    width: 30%;
+    width: 32%;
     padding: 10px;
     border-radius: 25px;
+}
+
+#populaireHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .populaireCard{
     background: white;
     display: flex;
     border-radius: 15px;
-    margin: 25px;
+    margin: 25px 0;
     box-shadow: 3px 3px 10px 5px #d9d9d9;
 }
 
@@ -190,7 +217,7 @@ h3{
 }
 
 .imagePopulaire{
-    height: 140px; /* 140px */
+    height: 140px; /* 100% */ 
     width: 100%;
     border-radius: 15px 0 0 15px;
     object-fit: cover;
@@ -252,7 +279,7 @@ h3{
 /* MEDIA QUERIES TABLETTE */
 @media screen and (max-width:992px){
     body{
-        padding: 15px 50px 0 25px;
+        padding: 15px 15px 0 15px;
     }
 
     #sectionContainer{
@@ -291,16 +318,21 @@ h3{
     }
 
     header{
-        padding: 0 20px;
+        /* padding: 0 20px; */
     }
 
     .booki{
         flex-direction: column;
+        align-items: center;
     }
 
     .bookiImage{
         margin-top: 15px;
         text-align: center;
+    }
+
+    #trouvezHebergement{
+        padding: 0 20px;
     }
 
     .navbar{
@@ -309,8 +341,9 @@ h3{
 
     .navbarLiens{
         width: 50%;
-        border-bottom: 3px #fafafa solid;
+        border-bottom: 3px #d9d9d9 solid;
         text-align: center;
+        margin: 0;
     }
 
     .navbarLiens:hover{
@@ -320,10 +353,11 @@ h3{
 
     #barreRecherche{
         width: 100%;
+        padding: 0 20px;
     }
 
     #rechercheInput{
-        width: 100%;
+        width: 250px;
     }
 
     #rechercheInput input{
@@ -339,6 +373,10 @@ h3{
         display: block;
     }
 
+    .filtresContainer{
+        padding: 0 20px;
+    }
+
     #filtresTitre{
         margin-right: 50%;
         margin-bottom: 15px;
@@ -349,6 +387,10 @@ h3{
         width: 46%;
         margin-bottom: 25px;
         font-size: 0.75em;
+    }
+
+    #logements{
+        padding: 0 20px;
     }
 
     #sectionContainer{
